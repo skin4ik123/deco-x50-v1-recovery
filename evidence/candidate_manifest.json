@@ -17,5 +17,6 @@
   "root_ubi_bytes": 37355520,
   "assumed_slot_bytes": 44040192,
   "isManu": 0,
-  "scope": "Reproduced with the legacy 2022/2023 host loader harness. One owner reported a red LED after the trial; full device recovery is not yet confirmed. Stock firmware, not OpenWrt. The examined loader does not erase runtime_data for this image."
+  "scope": "Reproduced with the legacy 2022/2023 host loader harness. On 2026-11-01 the device owner confirmed successful recovery in the reported EU X50 v1.0 case. Compatibility with other hardware or bootloaders is not established. Stock firmware, not OpenWrt. The examined loader does not erase runtime_data for this image.",
+  "hardware_recovery_report": "hardware_recovery_report.json"
 }

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-01",
+  "status": "owner_confirmed_success",
+  "reported_by": "device_owner",
+  "device": {
+    "model": "TP-Link Deco X50",
+    "hardware_revision": "v1.0",
+    "region": "EU"
+  },
+  "initial_problem": "Bootloop after installing official ISP-US 2.1.0 Build 20260829 firmware.",
+  "previous_recovery_attempt": "The official X55 v1 1.2.2 recovery image uploaded, but the bootloop persisted.",
+  "recovery_method": "Legacy U-Boot HTTP recovery",
+  "recovery_image": {
+    "stock_version": "1.6.7 Build 25031412 Rel. 48241",
+    "sha256": "0dd441b4dab6027591f0b1d13b4c63d7c820f5580473847a23730140e1e96370"
+  },
+  "outcome": "The owner confirmed successful recovery after using the modified stock 1.6.7 image.",
+  "evidence_type": "Owner confirmation in the follow-up conversation; not a direct device measurement by the host test harness.",
+  "scope": "Reported EU X50 v1.0 case only. Other hardware revisions and bootloaders are not validated by this report."
+}

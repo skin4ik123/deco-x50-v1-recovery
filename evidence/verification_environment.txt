@@ -1,4 +1,5 @@
 Python 3.12.14
 cryptography 50.0.2
 OpenSSL 3.5.8 25 Aug 2026
-Linux host tests; mock NAND map 42 MiB per OS slot. No physical router was tested.
+Linux host tests; mock NAND map 42 MiB per OS slot. These host runs did not access a physical router.
+Device recovery was separately confirmed successful by the owner on 2026-11-01; see hardware_recovery_report.json.

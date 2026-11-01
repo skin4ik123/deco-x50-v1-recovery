@@ -22,7 +22,11 @@ The packaged tools were checked again before publication: all eight builder test
 
 These tests do not touch hardware. All NAND erase/write and environment operations are inert `MOCK_*` logs. The OS slot size is an assumption. Hardware support checks, real NAND behavior, booting the kernel, factory reset and Internet access are not established by this harness.
 
-Hardware feedback: an owner reported a red LED after a trial. This is an observation, not a confirmed complete recovery. No recovery success rate can be calculated from the available feedback.
+## Device recovery report
+
+**2026-11-01: successful recovery confirmed by the device owner** for the reported EU X50 v1.0 bootloop case using the modified stock 1.6.7 image through U-Boot HTTP recovery. The earlier red-LED observation has been superseded by the owner's confirmation of successful recovery. See [hardware_recovery_report.json](../evidence/hardware_recovery_report.json).
+
+This is an owner-reported hardware outcome, separate from the host tests above. It does not establish compatibility with other hardware revisions or bootloaders, or a general recovery success rate.
 
 ## Builder checks
 

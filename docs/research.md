@@ -70,7 +70,7 @@ Changing the declared size of 1.8.0 does not help its different signature pass t
 
 ## Bootloop and reset findings
 
-The motivating report concerned EU X50 v1 units that entered a bootloop after the official ISP-US 2.1.0 update. The vendor's X55 1.2.2 recovery image uploaded, but the bootloop reportedly remained. After the experimental 1.6.7 trial, an owner reported a red LED. A complete boot/reset/setup success has not yet been established.
+The motivating report concerned EU X50 v1 units that entered a bootloop after the official ISP-US 2.1.0 update. The vendor's X55 1.2.2 recovery image uploaded, but the bootloop reportedly remained. After the modified stock 1.6.7 trial, the owner initially reported a red LED and subsequently confirmed successful recovery on 2026-11-01. See the [hardware recovery report](../evidence/hardware_recovery_report.json). The recovery outcome is owner-reported; host harness results remain separate from device feedback.
 
 Several source observations explain why a successfully accepted upload alone is insufficient:
 

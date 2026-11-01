@@ -35,5 +35,10 @@
       "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n"
     }
   ],
-  "hardware_scope": "Host-only verification; owner red-LED feedback is not a complete recovery confirmation."
+  "hardware_scope": "Host validation above used inert flash stubs and no physical router. The device owner subsequently confirmed successful recovery in the reported EU X50 v1.0 case on 2026-11-01; this is separate owner-reported hardware feedback.",
+  "hardware_recovery": {
+    "date": "2026-11-01",
+    "status": "owner_confirmed_success",
+    "report": "hardware_recovery_report.json"
+  }
 }

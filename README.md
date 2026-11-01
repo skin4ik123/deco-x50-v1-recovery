@@ -2,9 +2,9 @@
 
 [Русская инструкция](README.ru.md)
 
-Experimental recovery research for an ordinary **TP-Link Deco X50 hardware v1** that still exposes U-Boot HTTP recovery, but will not boot after an update. The image builder reproduces a stock **1.6.7 Build 25031412 Rel. 48241** candidate by changing only an unsigned length field. All signed firmware content is preserved.
+Recovery tools and source analysis for an ordinary **TP-Link Deco X50 hardware v1** that still exposes U-Boot HTTP recovery, but will not boot after an update. The image builder reproduces a stock **1.6.7 Build 25031412 Rel. 48241** candidate by changing only an unsigned length field. All signed firmware content is preserved.
 
-**Status, 2026-11-01:** the candidate passes the original published loader code in a host test with inert flash stubs. An owner reported a red LED after the trial. Successful reset, setup and Internet access have not yet been confirmed. A red LED alone does not establish successful recovery. Treat this as an experimental candidate, not a proven repair.
+**Status, 2026-11-01: successful recovery confirmed by the device owner.** The owner confirmed that recovery with the modified stock 1.6.7 image succeeded in the reported EU X50 v1.0 bootloop case. The image also passes the original published loader code in host tests with inert flash stubs. See the [hardware recovery report](evidence/hardware_recovery_report.json). This result applies to the reported case; compatibility with other hardware or bootloaders is not established.
 
 ## Scope
 
@@ -61,7 +61,7 @@ For the experimental candidate, use the same HTTP recovery entry procedure: conn
 
 If stock firmware starts, a normal factory reset erases settings: press Reset for one second and release, then wait about two minutes. [The X50 guide](https://www.tp-link.com/uk/document/27326/?app=wifi-toolkit) describes pulsing blue as ready for setup and solid green as connected. A red LED requires further checking. Restore the PC's usual DHCP settings afterward.
 
-If recovery rejects the image or the unit continues cycling, record the exact message and stop treating this as a confirmed fix. This project has no established automatic configuration erase or power-cycle fallback method.
+If recovery rejects the image or the unit continues cycling, record the exact message. The owner-confirmed success in the reported case does not guarantee recovery of every device. This project has no established automatic configuration erase or power-cycle fallback method.
 
 ## Why it can help
 

@@ -1,0 +1,64 @@
+name: Publish recovery firmware
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/release-recovery.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: recovery-release-v1.0.0
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.repository == 'skin4ik123/deco-x50-v1-recovery'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out release sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Download and authenticate the exact official firmware
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from tools import make_recovery as recovery
+          recovery.save_new(Path('inputs/stock-1.6.7.bin'), recovery.download_source())
+          PY
+
+      - name: Run genuine-image checks and build the release BIN
+        env:
+          DECO_STOCK_BIN: inputs/stock-1.6.7.bin
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 tools/make_recovery.py --input inputs/stock-1.6.7.bin --output artifacts/Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin
+          python3 tools/make_recovery.py --check artifacts/Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin
+
+      - name: Verify the signature with the original host loader
+        run: |
+          make -C host_harness
+          host_harness/check_recovery artifacts/Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin
+
+      - name: Create checksum file
+        working-directory: artifacts
+        run: sha256sum Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin > SHA256SUMS.txt
+
+      - name: Publish the checked firmware and checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create v1.0.0 \
+            artifacts/Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin \
+            artifacts/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" \
+            --title "Deco X50 V1 HTTP Recovery — TP-Link 1.6.7" \
+            --notes-file docs/releases/v1.0.0.md

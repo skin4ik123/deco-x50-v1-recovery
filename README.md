@@ -16,7 +16,13 @@ Recovery tools and source analysis for an ordinary **TP-Link Deco X50 hardware v
 
 The installed bootloader and NAND layout were not read from the owner's device. Another loader could handle the altered length differently. Flashing can leave the device unusable; use this only if you accept that experimental scope.
 
-## Build the exact candidate
+## Download the ready-to-upload firmware
+
+The [latest recovery release](https://github.com/skin4ik123/deco-x50-v1-recovery/releases/latest) includes **`Deco_X50_V1_1.6.7_TPLink_HTTP_Recovery.bin`**, its SHA-256 and instructions. Select the BIN under **Assets**. It is byte-identical to the reproducible candidate below and the image in the owner-confirmed recovery case.
+
+Upload through **U-Boot HTTP recovery at `192.168.0.1`**, for the reported **Deco X50 EU V1.0** case. The installed system version is **TP-Link 1.6.7**; the project release number identifies the recovery package.
+
+## Build the exact candidate yourself
 
 Download this repository's source ZIP and extract it, or clone it. With Python **3.9+**, run from the repository folder:
 
@@ -81,4 +87,4 @@ Issues with exact hardware revision, starting firmware, recovery response and ob
 
 ## License and credits
 
-Project additions are GPL-2.0-or-later; original TP-Link/U-Boot source retains its notices and upstream licensing. See [LICENSE](LICENSE) and [THIRD_PARTY.md](THIRD_PARTY.md). This repository contains tools and evidence, not redistributed vendor firmware binaries. It is an independent project, not an official TP-Link or OpenWrt release.
+Project additions are GPL-2.0-or-later; original TP-Link/U-Boot source retains its notices and upstream licensing. See [LICENSE](LICENSE) and [THIRD_PARTY.md](THIRD_PARTY.md). The Git tree contains reproduction tools and evidence; ready-to-upload recovery images are published separately as release assets. Vendor firmware is not relicensed under the project's license. This is an independent project, not an official TP-Link release.

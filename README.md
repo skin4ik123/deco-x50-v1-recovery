@@ -6,6 +6,8 @@ Recovery tools and source analysis for an ordinary **TP-Link Deco X50 hardware v
 
 **Status, 2026-11-01: successful recovery confirmed by the device owner.** The owner confirmed that recovery with the modified stock 1.6.7 image succeeded in the reported EU X50 v1.0 bootloop case. The image also passes the original published loader code in host tests with inert flash stubs. See the [hardware recovery report](evidence/hardware_recovery_report.json). This result applies to the reported case; compatibility with other hardware or bootloaders is not established.
 
+**Post-recovery progress, 2026-11-01:** on the tested EU v1.0 unit, an owner-authenticated session was used to execute a fixed command as `uid=0(root) gid=0(root)` without UART. The owner also completed and verified backups of **13 critical flash partitions (15.75 MiB)**. The temporary web cache was restored and checked after the probes. **OpenWrt has not been installed by this route.** See the [progress report](docs/progress-2026-11-01.md) and [structured results](evidence/post_recovery_progress.json).
+
 ## Scope
 
 - Intended research target: ordinary X50 v1, specifically the EU v1.0 case that motivated this investigation, with the legacy HTTP loader represented in the 2022/2023 GPL sources.
@@ -14,7 +16,7 @@ Recovery tools and source analysis for an ordinary **TP-Link Deco X50 hardware v
 - It does not bypass RSA verification or install OpenWrt. The payload remains genuine TP-Link stock firmware.
 - The examined loader writes an OS slot and boot index. This image has `isManu=0`, so that loader does not clear `runtime_data`.
 
-The installed bootloader and NAND layout were not read from the owner's device. Another loader could handle the altered length differently. Flashing can leave the device unusable; use this only if you accept that experimental scope.
+At the time of the recovery experiment, the installed bootloader had not been compared with the published source. Later owner-run diagnostics confirmed two 42 MiB OS partitions, and the bootloader partition was included in the owner's private critical backup. Its implementation has not been independently compared byte for byte with the source used in the harness. Another loader could handle the altered length differently. Flashing can leave the device unusable; use this only if you accept that experimental scope.
 
 ## Download the ready-to-upload firmware
 
@@ -73,7 +75,7 @@ If recovery rejects the image or the unit continues cycling, record the exact me
 
 In the examined loader, the size check uses the first four bytes, while RSA verification covers the actual upload from offset `0x14` to its real end. The system write length comes from the signed upgrade table. Consequently, this one length-field edit lets stock 1.6.7 pass the old 32 MiB payload limit without changing the signature or system image.
 
-The 1.6.7 UBI is 37,355,520 bytes and fits the **assumed** 42 MiB OS slot in the harness. Whether newer stock firmware can boot with retained data is a device-level question; it is not established by the host test.
+The 1.6.7 UBI is 37,355,520 bytes and fits the 42 MiB OS slot used in the harness; later device diagnostics confirmed that slot size on the tested unit. Whether another stock firmware can boot with retained data is a device-level question; it is not established by the host test.
 
 See [the source analysis](docs/research.md), [test results and reproduction](docs/validation.md), and [machine-readable evidence](evidence/).
 

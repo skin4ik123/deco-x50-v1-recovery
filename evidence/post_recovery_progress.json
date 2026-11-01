@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-01",
+  "device": {
+    "model": "TP-Link Deco X50",
+    "hardware_revision": "EU V1.0",
+    "scope": "One owner-tested unit after stock 1.6.7 recovery"
+  },
+  "root_execution": {
+    "owner_authenticated_session": true,
+    "uart_used": false,
+    "fixed_command": "id",
+    "observed_output": "uid=0(root) gid=0(root)",
+    "evidence": "Owner-supplied console output and private JSON result",
+    "original_ram_cache_restored_and_verified": true,
+    "permanent_shell_installed": false,
+    "new_account_created": false
+  },
+  "critical_backups": {
+    "verified_count": 13,
+    "total_bytes": 16515072,
+    "mtd_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14],
+    "evidence": "Owner-supplied client console reports CRITICAL_BACKUPS_VERIFIED: 13/13",
+    "transfer": "Bounded reads from read-only MTD devices over verified HTTPS",
+    "verification": "Device SHA-1 compared with the download; local SHA-256 recorded",
+    "format": "ECC-corrected MTD data without NAND OOB",
+    "excluded": ["rootfs", "rootfs_1", "runtime_data"],
+    "whole_flash_backup": false,
+    "dumps_independently_inspected": false,
+    "dumps_published": false,
+    "cache_restored_and_verified": true
+  },
+  "post_recovery_checks_wrote_flash": false,
+  "post_recovery_checks_changed_boot_selection": false,
+  "openwrt_installed_by_this_route": false,
+  "tested_restore_of_critical_dumps": false,
+  "privacy": "No device dumps, credentials, MAC addresses, serial numbers or private configuration included"
+}

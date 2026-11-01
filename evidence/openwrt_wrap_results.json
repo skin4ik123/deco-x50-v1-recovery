@@ -1,0 +1,68 @@
+{
+  "openwrt_sha256": "82b8dd525b40a7974c58b563a4f98cd7d405548b0df6bfdbeb21c48b27da5c52",
+  "openwrt_bytes": 14155776,
+  "carrier_sha256": "9d7c13c9570531d25fb00cf682ef19f2e6fe5a8509f690d26bfa0a00eae977bc",
+  "hardware_tested": false,
+  "results": [
+    {
+      "case": "stock_167_length_only_CONTROL",
+      "bytes": 37363379,
+      "declared_bytes": 33560596,
+      "sha256": "0dd441b4dab6027591f0b1d13b4c63d7c820f5580473847a23730140e1e96370",
+      "rsa_valid": true,
+      "accepted_by_host_loader": true,
+      "loader_summary": "ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=37355520",
+      "signature_error": false,
+      "format_table_parsed": true,
+      "scope": "Local host harness; no physical router connected or flashed"
+    },
+    {
+      "case": "openwrt_compact_cloud_md5_fixed",
+      "bytes": 14163635,
+      "declared_bytes": 14163635,
+      "sha256": "6aa5cc7bd64d4d6b756ff75b8b4f6833a156a909a01164f89c183174dda8bd7a",
+      "rsa_valid": false,
+      "accepted_by_host_loader": false,
+      "loader_summary": "ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0",
+      "signature_error": true,
+      "format_table_parsed": true,
+      "scope": "Local host harness; no physical router connected or flashed"
+    },
+    {
+      "case": "openwrt_compact_proud_md5_fixed",
+      "bytes": 14163635,
+      "declared_bytes": 14163635,
+      "sha256": "87638c317e5f77d42dfaac6e79c7b457b1b9123d2c1e42e661737af12a1a0260",
+      "rsa_valid": false,
+      "accepted_by_host_loader": false,
+      "loader_summary": "ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0",
+      "signature_error": true,
+      "format_table_parsed": true,
+      "scope": "Local host harness; no physical router connected or flashed"
+    },
+    {
+      "case": "openwrt_padded_stock_table_length_clamped",
+      "bytes": 37363379,
+      "declared_bytes": 33560596,
+      "sha256": "e7dd1835ae970310e742e75e138d9a405b63f7d290694b5476ce15aa76029d61",
+      "rsa_valid": false,
+      "accepted_by_host_loader": false,
+      "loader_summary": "ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0",
+      "signature_error": true,
+      "format_table_parsed": true,
+      "scope": "Local host harness; no physical router connected or flashed"
+    },
+    {
+      "case": "stock_signed_prefix_openwrt_appended",
+      "bytes": 51519155,
+      "declared_bytes": 33560596,
+      "sha256": "287d8c526aed9472057187941a3f7952befa0379fecdf5e05cc769ae6f243c01",
+      "rsa_valid": false,
+      "accepted_by_host_loader": false,
+      "loader_summary": "ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0",
+      "signature_error": true,
+      "format_table_parsed": true,
+      "scope": "Local host harness; no physical router connected or flashed"
+    }
+  ]
+}

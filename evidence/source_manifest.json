@@ -1,0 +1,76 @@
+[
+  {
+    "name": "GPL_X55.tar.gz",
+    "bytes": 769967361,
+    "sha256": "06381023806f22b380affc04ba78e57015256e8beac17d6c89092e540bdd6ef6",
+    "source": "https://static.tp-link.com/upload/gpl-code/2022/202206/20220602/GPL_X55.tar.gz"
+  },
+  {
+    "name": "GPL_x55_2023.tar.gz",
+    "bytes": 189190512,
+    "sha256": "c0dc50dbe76c076d4d5357d5694849cd3e0f3da3b53a600ac9125b98c14bfb73",
+    "source": "https://static.tp-link.com/upload/gpl-code/2023/202302/20230223/GPL_x55.tar.gz"
+  },
+  {
+    "name": "Deco_X55_V1.0_1.2.2_Build_230301.zip",
+    "bytes": 30134648,
+    "sha256": "b14c10ffd47855c0dfd873b5055a5b51b0d9c336ea852db90cd1ea37d2ceb359",
+    "source": "https://static.tp-link.com/upload/firmware/2023/202303/20230331/Deco_X55_V1.0_1.2.2_Build_230301.zip"
+  },
+  {
+    "name": "Deco_X50_ISP_US_V1_2.1.0_20260829.zip",
+    "bytes": 30130967,
+    "sha256": "c247c461b88b18f933017dba6e8268c6970e31f5e176d6ac28f5edc6d8d40474",
+    "source": "https://static.tp-link.com/upload/firmware/2026/202609/20260916/Deco%20X50%28ISP-US%29v1_2.1.0_Build%2020260829.zip"
+  },
+  {
+    "name": "Deco_X50_US_V1_1.11.1_26081714.zip",
+    "bytes": 38372204,
+    "sha256": "42bda5ef011e8b901837b6fa6d6e6b10668cd6c2a3f5e6781894c2ec561ad3fb",
+    "source": "https://static.tp-link.com/upload/firmware/2026/202609/20260928/Deco-ver1-11-1-P1[26081714-rel32981].zip"
+  },
+  {
+    "name": "Deco_X50_V1_1.3.1_230824.zip",
+    "bytes": 36051782,
+    "sha256": "be0125870f7784a8edf976ae1a3c7cf39c86c5eb66a2cc5ad21c2dfed86d9bef",
+    "source": "https://static.tp-link.com/upload/firmware/2023/202310/20231010/Deco%20X50_V1_1.3.1_230824.zip"
+  },
+  {
+    "name": "Deco_X50_V1_1.5.5_240718.zip",
+    "bytes": 34215158,
+    "sha256": "23473d428aacb592e18cdccdc8037729ad1dfd155581cb1af8aba10061c282d5",
+    "source": "https://static.tp-link.com/upload/firmware/2024/202408/20240807/X50_v1_1.5.5_240718.zip"
+  },
+  {
+    "name": "Deco_X50_V1_1.6.7_25031412.zip",
+    "bytes": 35211174,
+    "sha256": "f810c90d377f7f59ce6a1e9b5e6c52d90f8c3ce6c9bfc7df86a48ce86b4af7e1",
+    "source": "https://static.tp-link.com/upload/firmware/2025/202506/20250604/X50v1_1.6.7%20Build%2025031412%20Rel.%2048241.zip"
+  },
+  {
+    "name": "Deco_X50_V1_1.8.0_25102213.zip",
+    "bytes": 38142778,
+    "sha256": "f5891e871865d6213b1a6b05aa4d65051e19a0a37bee0b6550d9033fb4092a12",
+    "source": "https://static.tp-link.com/upload/firmware/2025/202512/20251208/Deco_X50_V1_1.8.0_Build_25102213_Rel._43970.zip"
+  },
+  {
+    "sha256": "463da6ba465e4216abf497822e3d55fc9426fa44d6f5c4a0c5a7a85ea783d6e6",
+    "bytes": 15521,
+    "archive_member": "GPL_X55/qca/src/u-boot-2016/lib/nvrammanager/nm_fwup.c"
+  },
+  {
+    "sha256": "1c9d9069dda305bf00574776e9f97afcc4a268d9ad456f6809dabf9b866da900",
+    "bytes": 18747,
+    "archive_member": "GPL_X55/qca/src/u-boot-2016/lib/uip/httpd.c"
+  },
+  {
+    "sha256": "463da6ba465e4216abf497822e3d55fc9426fa44d6f5c4a0c5a7a85ea783d6e6",
+    "bytes": 15521,
+    "archive_member": "11.4/qca/src/u-boot-2016/lib/nvrammanager/nm_fwup.c"
+  },
+  {
+    "sha256": "1c9d9069dda305bf00574776e9f97afcc4a268d9ad456f6809dabf9b866da900",
+    "bytes": 18747,
+    "archive_member": "11.4/qca/src/u-boot-2016/lib/uip/httpd.c"
+  }
+]

@@ -1,0 +1,4 @@
+nm_fwup.c, nm_fwup.h, nm_lib.h, nm_api.h, sysProductInfo.h are preserved from TP-Link GPL X55.
+Original source URL: https://static.tp-link.com/upload/gpl-code/2022/202206/20220602/GPL_X55.tar.gz
+Host compatibility headers and driver.c are local analysis additions under GPL-2.0-or-later.
+No binary in this directory connects to a router or writes physical flash. The test substitutes all hardware operations.

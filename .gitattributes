@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Keep vendor files byte-identical, including their upstream whitespace.
+host_harness/nm_fwup.c -text -whitespace
+host_harness/nm_fwup.h -text -whitespace
+host_harness/nm_lib.h -text -whitespace
+host_harness/nm_api.h -text -whitespace
+host_harness/sysProductInfo.h -text -whitespace

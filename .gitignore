@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.o
+*.bin
+*.ubi
+*.zip
+*.tar.gz
+artifacts/
+inputs/
+.venv/
+host_harness/check_recovery

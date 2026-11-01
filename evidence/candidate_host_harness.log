@@ -1,0 +1,14 @@
+HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.
+HARNESS_RSA_VALID=1
+[NM_Debug](nm_readFwUpTbl) 00132: up table: root size: 37355520, ptn num: 2, is manu 0
+[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: support-list, base: 37355520, size: 1556
+[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: soft-version, base: 37357076, size: 139
+[NM_Debug](nm_ptnNameToUpEntry) 00181: ptn support-list found
+Firmware checking passed
+[NM_Debug](nm_writeRootToMtd) 00194: Writing MTD len: 37355520, root idx: 1
+MOCK_ERASE offset=0x3040000 size=0x2a00000
+MOCK_WRITE offset=0x3040000 bytes=37355520 max=44040192
+[NM_Debug](nm_setBootIdx) 00234: Setting boot idx: 1
+MOCK_SETENV tp_boot_idx=1
+MOCK_SAVEENV
+HARNESS_RESULT ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=37355520

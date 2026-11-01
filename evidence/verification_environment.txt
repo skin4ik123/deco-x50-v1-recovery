@@ -1,0 +1,4 @@
+Python 3.12.14
+cryptography 50.0.2
+OpenSSL 3.5.8 25 Aug 2026
+Linux host tests; mock NAND map 42 MiB per OS slot. No physical router was tested.

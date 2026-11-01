@@ -1,0 +1,21 @@
+{
+  "source_filename": "X50v1_1.6.7 Build 25031412 Rel. 48241.zip",
+  "source_archive_url": "https://static.tp-link.com/upload/firmware/2025/202506/20250604/X50v1_1.6.7%20Build%2025031412%20Rel.%2048241.zip",
+  "original_sha256": "9d7c13c9570531d25fb00cf682ef19f2e6fe5a8509f690d26bfa0a00eae977bc",
+  "candidate_sha256": "0dd441b4dab6027591f0b1d13b4c63d7c820f5580473847a23730140e1e96370",
+  "actual_bytes": 37363379,
+  "original_declared_bytes": 37363379,
+  "candidate_declared_bytes": 33560596,
+  "byte_offsets_changed": [
+    1,
+    2,
+    3
+  ],
+  "all_bytes_from_offset_4_unchanged": true,
+  "rsa_signature_valid_before": true,
+  "rsa_signature_valid_after": true,
+  "root_ubi_bytes": 37355520,
+  "assumed_slot_bytes": 44040192,
+  "isManu": 0,
+  "scope": "Reproduced with the legacy 2022/2023 host loader harness. One owner reported a red LED after the trial; full device recovery is not yet confirmed. Stock firmware, not OpenWrt. The examined loader does not erase runtime_data for this image."
+}

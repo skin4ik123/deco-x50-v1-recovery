@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-01",
+  "builder_unit_and_integration_tests": 8,
+  "official_https_download_and_archive_hash": "passed",
+  "original_and_candidate_rsa_valid": true,
+  "signature_mutation_controls": [
+    {
+      "case": "original",
+      "signature_valid": true
+    },
+    {
+      "case": "Cloud_to_Proud",
+      "signature_valid": false
+    },
+    {
+      "case": "one_payload_bit_changed",
+      "signature_valid": false
+    }
+  ],
+  "openwrt_reproduction_identical_to_recorded_results": true,
+  "host_checks": [
+    {
+      "case": "candidate",
+      "exit_code": 0,
+      "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=1\n[NM_Debug](nm_readFwUpTbl) 00132: up table: root size: 37355520, ptn num: 2, is manu 0\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: support-list, base: 37355520, size: 1556\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: soft-version, base: 37357076, size: 139\n[NM_Debug](nm_ptnNameToUpEntry) 00181: ptn support-list found\nFirmware checking passed\n[NM_Debug](nm_writeRootToMtd) 00194: Writing MTD len: 37355520, root idx: 1\nMOCK_ERASE offset=0x3040000 size=0x2a00000\nMOCK_WRITE offset=0x3040000 bytes=37355520 max=44040192\n[NM_Debug](nm_setBootIdx) 00234: Setting boot idx: 1\nMOCK_SETENV tp_boot_idx=1\nMOCK_SAVEENV\nHARNESS_RESULT ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=37355520\n"
+    },
+    {
+      "case": "stock-original",
+      "exit_code": 2,
+      "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\n[NM_Error](nm_upgradeFirmware) 00482: Bad file size: buffer: 37363379, file: 37363379\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n"
+    },
+    {
+      "case": "stock-corrupt",
+      "exit_code": 2,
+      "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n"
+    }
+  ],
+  "hardware_scope": "Host-only verification; owner red-LED feedback is not a complete recovery confirmation."
+}

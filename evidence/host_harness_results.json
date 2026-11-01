@@ -1,0 +1,85 @@
+[
+  {
+    "test": "recovery-original",
+    "args": [],
+    "exit_code": 0,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=1\n[NM_Debug](nm_readFwUpTbl) 00132: up table: root size: 32243712, ptn num: 2, is manu 0\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: support-list, base: 32243712, size: 697\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: soft-version, base: 32244409, size: 139\n[NM_Debug](nm_ptnNameToUpEntry) 00181: ptn support-list found\nFirmware checking passed\n[NM_Debug](nm_writeRootToMtd) 00194: Writing MTD len: 32243712, root idx: 1\nMOCK_ERASE offset=0x3040000 size=0x2a00000\nMOCK_WRITE offset=0x3040000 bytes=32243712 max=44040192\n[NM_Debug](nm_setBootIdx) 00234: Setting boot idx: 1\nMOCK_SETENV tp_boot_idx=1\nMOCK_SAVEENV\nHARNESS_RESULT ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=32243712\n",
+    "stderr": ""
+  },
+  {
+    "test": "recovery-proud",
+    "args": [
+      "--proud"
+    ],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "recovery-flip",
+    "args": [
+      "--flip"
+    ],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "recovery-manu",
+    "args": [
+      "--manu"
+    ],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "1.6.7-original",
+    "args": [],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\n[NM_Error](nm_upgradeFirmware) 00482: Bad file size: buffer: 37363379, file: 37363379\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "1.6.7-clamp",
+    "args": [
+      "--clamp"
+    ],
+    "exit_code": 0,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=1\n[NM_Debug](nm_readFwUpTbl) 00132: up table: root size: 37355520, ptn num: 2, is manu 0\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: support-list, base: 37355520, size: 1556\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: soft-version, base: 37357076, size: 139\n[NM_Debug](nm_ptnNameToUpEntry) 00181: ptn support-list found\nFirmware checking passed\n[NM_Debug](nm_writeRootToMtd) 00194: Writing MTD len: 37355520, root idx: 1\nMOCK_ERASE offset=0x3040000 size=0x2a00000\nMOCK_WRITE offset=0x3040000 bytes=37355520 max=44040192\n[NM_Debug](nm_setBootIdx) 00234: Setting boot idx: 1\nMOCK_SETENV tp_boot_idx=1\nMOCK_SAVEENV\nHARNESS_RESULT ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=37355520\n",
+    "stderr": ""
+  },
+  {
+    "test": "1.6.7-clamp-flip",
+    "args": [
+      "--clamp",
+      "--flip"
+    ],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "ISP-original",
+    "args": [],
+    "exit_code": 0,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=1\n[NM_Debug](nm_readFwUpTbl) 00132: up table: root size: 32768000, ptn num: 2, is manu 0\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: support-list, base: 32768000, size: 469\n[NM_Debug](nm_readFwUpTbl) 00152: up entry-> name: soft-version, base: 32768469, size: 139\n[NM_Debug](nm_ptnNameToUpEntry) 00181: ptn support-list found\nFirmware checking passed\n[NM_Debug](nm_writeRootToMtd) 00194: Writing MTD len: 32768000, root idx: 1\nMOCK_ERASE offset=0x3040000 size=0x2a00000\nMOCK_WRITE offset=0x3040000 bytes=32768000 max=44040192\n[NM_Debug](nm_setBootIdx) 00234: Setting boot idx: 1\nMOCK_SETENV tp_boot_idx=1\nMOCK_SAVEENV\nHARNESS_RESULT ret=0 erase_calls=1 write_calls=1 config_erase_calls=0 support_stub_calls=0 written_bytes=32768000\n",
+    "stderr": ""
+  },
+  {
+    "test": "1.8.0-original",
+    "args": [],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\n[NM_Error](nm_upgradeFirmware) 00482: Bad file size: buffer: 37625536, file: 37625536\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  },
+  {
+    "test": "1.8.0-clamp",
+    "args": [
+      "--clamp"
+    ],
+    "exit_code": 2,
+    "trace": "HOST_ONLY: flash and environment calls are stubbed; no physical router is involved.\nHARNESS_RSA_VALID=0\n[NM_Error](nm_upgradeFirmware) 00488: Verify sig error!\n\nHARNESS_RESULT ret=-1 erase_calls=0 write_calls=0 config_erase_calls=0 support_stub_calls=0 written_bytes=0\n",
+    "stderr": ""
+  }
+]

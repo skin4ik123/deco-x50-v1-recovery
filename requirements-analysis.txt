@@ -1,0 +1,3 @@
+# Optional offline inspection tool only. The image builder has no dependencies.
+# Analysis was reproduced with cryptography 50.0.2.
+cryptography>=41
